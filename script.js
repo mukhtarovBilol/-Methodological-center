@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document?.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.mySwiper', {
         slidesPerView: 3, // Показывать 3 слайда одновременно
         spaceBetween: 10, // Расстояние между слайдами
@@ -30,10 +30,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const menuLinks = document.querySelectorAll('.nav__list-linkk.info');
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Предотвращаем стандартное действие ссылки
+
+            const parentItem = this.parentElement;
+            const submenu = parentItem.querySelector('.nav__list-info');
+
+            // Закрываем все другие подменю
+            document.querySelectorAll('.nav__list-item.active').forEach(item => {
+                if (item !== parentItem) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Переключаем текущее подменю
+            parentItem.classList.toggle('active');
+        });
+    });
+});
+
 
 var myForm = document.getElementById("myForm");
 
-myForm.addEventListener("submit", function(event) {
+myForm?.addEventListener("submit", function(event) {
     event.preventDefault(); // Предотвращаем стандартное поведение формы
 
     var formData = new FormData(myForm);
