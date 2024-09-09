@@ -145,10 +145,11 @@ img {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    width: 250px; 
+    width: 300px; 
     transition: opacity 0.3s, visibility 0.3s;
     opacity: 0; 
     visibility: hidden; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .nav__list-info-item a {
@@ -268,8 +269,6 @@ img {
 }
 
 .swiper-slide {
-    width: 150px;
-    height: 100px;
     display: flex !important;
     flex-direction: column;
     align-items: center;
@@ -283,6 +282,7 @@ img {
 
 .swiper-slide-image {
     width: 100%;
+    height: 100%;
     transition: transform 0.4s ease-in-out;
     object-fit: cover;
 }
@@ -640,9 +640,8 @@ img {
 
 /* structure */
 
-.section {
-    margin-bottom: 30px;
-    padding: 130px 20px 20px 20px;
+.section--structure-management {
+    margin-top: 100px;
     border-radius: 8px;
     background-color: #f8f9fa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -1159,7 +1158,6 @@ img {
     padding: 20px;
 }
 
-/* Заголовок секции */
 .pricing__header {
     font-size: 1.5em;
     font-weight: bold;
@@ -1167,7 +1165,6 @@ img {
     text-align: center;
 }
 
-/* Стиль для секций с информацией */
 .pricing__section {
     margin-bottom: 20px;
     padding: 10px;
@@ -1182,7 +1179,6 @@ img {
     margin-bottom: 10px;
 }
 
-/* Стиль для деталей */
 .pricing__details {
     font-size: 1em;
     line-height: 1.6;
@@ -1325,4 +1321,86 @@ img {
     .contract__text {
         font-size: 12px;
     }
+}
+
+/* pricing */
+
+/* finansovo hoz */
+
+.page {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.nfv {
+    padding: 20px;
+}
+
+.nfv__title {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: #0056b3;
+}
+
+.nfv__description {
+    line-height: 1.5;   
+}
+
+.nfv__section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.nfv__subtitle {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #003d6b;
+}
+
+.nfv__text,
+.nfv__address,
+.nfv__details {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+.nfv__list,
+.nfv__report-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nfv__list-item,
+.nfv__report-list-item {
+    margin-bottom: 10px;
+}
+
+.nfv__list-value,
+.nfv__report-value {
+    font-weight: bold;
+}
+
+.nfv__report {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.nfv__report-title {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #0056b3;
+}
+
+.nfv__sublist {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.nfv__sublist-item {
+    margin-bottom: 5px;
 }
