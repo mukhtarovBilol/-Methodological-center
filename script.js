@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => console.error(`Ошибка загрузки ${elementId}:`, error));
     }
 
-    loadContent('./CommonNav.html', 'navbar')
+    loadContent('/html/CommonNav.html', 'navbar')
         .then(() => {
             const menuLinks = document.querySelectorAll('.nav__list-linkk.info');
 
