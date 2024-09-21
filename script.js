@@ -24,59 +24,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.nav__burger');
     const menu = document.querySelector('.nav__menu');
 
-    burger.addEventListener('click', () => {
+    burger?.addEventListener('click', () => {
         menu.classList.toggle('active');
         burger.classList.toggle('active');
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuLinks = document.querySelectorAll('.nav__list-linkk.info');
-
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault(); // Предотвращаем стандартное действие ссылки
-
-            const parentItem = this.parentElement;
-            const submenu = parentItem.querySelector('.nav__list-info');
-
-            // Закрываем все другие подменю
-            document.querySelectorAll('.nav__list-item.active').forEach(item => {
-                if (item !== parentItem) {
-                    item.classList.remove('active');
+document.addEventListener("DOMContentLoaded", function () {
+    function loadContent(url, elementId) {
+        return fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Ошибка сети');
                 }
+                return response.text();
+            })
+            .then(data => {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.innerHTML = data;
+                }
+            })
+            .catch(error => console.error(`Ошибка загрузки ${elementId}:`, error));
+    }
+
+    loadContent('/CommonNav.html', 'navbar')
+        .then(() => {
+            const menuLinks = document.querySelectorAll('.nav__list-linkk.info');
+
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // Предотвращаем стандартное действие ссылки
+
+                    const parentItem = this.parentElement;
+                    
+                    // Закрываем все другие подменю
+                    document.querySelectorAll('.nav__list-item.active').forEach(item => {
+                        if (item !== parentItem) {
+                            item.classList.remove('active');
+                        }
+                    });
+
+                    // Переключаем текущее подменю
+                    parentItem.classList.toggle('active');
+                });
             });
-
-            // Переключаем текущее подменю
-            parentItem.classList.toggle('active');
-        });
-    });
-});
-
-
-var myForm = document.getElementById("myForm");
-
-myForm?.addEventListener("submit", function(event) {
-    event.preventDefault(); // Предотвращаем стандартное поведение формы
-
-    var formData = new FormData(myForm);
-
-    fetch('main.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(function(response) {
-        if (!response.ok) {
-            throw new Error('Ошибка ' + response.status);
-        }
-        return response.text();
-    })
-    .then(function(data) {
-        alert('Данные успешно отправлены');
-        closeModal(); // Закрываем модальное окно после успешной отправки
-    })
-    .catch(function(error) {
-        console.error('Произошла ошибка:', error);
-        alert('Произошла ошибка при отправке данных');
-    });
+        })
+        .catch(error => console.error('Ошибка при загрузке навигации:', error));
 });

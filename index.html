@@ -11,8 +11,7 @@
     content="Официальный сайт Методического центра охраны труда. Мы предоставляем ресурсы  и консультации по вопросам охраны труда и безопасности на рабочем месте.">
   <meta property="og:image" content="https://mcot35.ru/image/favicon.jpg">
   <meta property="og:url" content="https://mcot35.ru/">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swi
-  per@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="icon" href="https://mcot35.ru/image/favicon.jpg" type="image/x-icon">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="style.css">
@@ -43,8 +42,10 @@
 <!-- <a href="https://example.com" target="_blank">Перейти на Example.com</a> -->
 
 <body>
+  
+  <nav id="navbar" class="nav"></nav>
 
-  <nav class="nav">
+  <!-- <nav class="nav">
     <div class="container">
       <div class="nav__burger" aria-label="Меню">
         <span class="nav__burger-line"></span>
@@ -54,27 +55,36 @@
       <div class="nav__menu">
         <ul class="nav__list">
           <li class="nav__list-item">
-            <a class="nav__list-link" href="/index.html">Главная</a>
+            <P class="nav__list-linkk info" href="/index.html">Главная <i class='bx bxs-caret-down-circle'></i></p>
+            <ul class="nav__list-info info2">
+              <li class="nav__list-info-item ">
+                <a href="/applications.html">Зявка на обучение</a>
+              </li>
+              <li class="nav__list-info-item ">
+                <a href="https://mcot35.ru/o/" target="_blank">Самоподготовка</a>
+              </li>
+            </ul>
           </li>
           <li class="nav__list-item">
-            <p class="nav__list-linkk info" >Сведения об организации <i class='bx bxs-caret-down-circle'></i>
-              <ul class="nav__list-info">
-                <li class="nav__list-info-item">
-                  <a href="/full-info.html" >Основные сведения</a>
-                </li>
-                <li class="nav__list-info-item">
-                  <a href="/rukovodstvo.html" >Руководство. Педагогический (научно-педагогический) состав</a>
-                </li>
-                <li class="nav__list-info-item">
-                  <a href="/materialno-tehnicheskoe.html" >Материально-техническое обеспечение и оснащенность образовательного процесса</a>
-                </li>
-                <li class="nav__list-info-item">
-                  <a href="/platnye-obrazovatelnye.html" >Платные образовательные услуги</a>
-                </li>
-                <li class="nav__list-info-item">
-                  <a href="/finansovo-hozjajstvennaja.html" >Финансово-хозяйственная деятельность</a>
-                </li>
-              </ul>
+            <p class="nav__list-linkk info">Сведения об организации <i class='bx bxs-caret-down-circle'></i>
+            <ul class="nav__list-info">
+              <li class="nav__list-info-item">
+                <a href="/full-info.html">Основные сведения</a>
+              </li>
+              <li class="nav__list-info-item">
+                <a href="/rukovodstvo.html">Руководство. Педагогический (научно-педагогический) состав</a>
+              </li>
+              <li class="nav__list-info-item">
+                <a href="/materialno-tehnicheskoe.html">Материально-техническое обеспечение и оснащенность
+                  образовательного процесса</a>
+              </li>
+              <li class="nav__list-info-item">
+                <a href="/platnye-obrazovatelnye.html">Платные образовательные услуги</a>
+              </li>
+              <li class="nav__list-info-item">
+                <a href="/finansovo-hozjajstvennaja.html">Финансово-хозяйственная деятельность</a>
+              </li>
+            </ul>
             </p>
           </li>
           <li class="nav__list-item">
@@ -96,12 +106,12 @@
         </div>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <header class="header">
     <div class="container">
       <h1 class="header__title">Методический центр охраны труда</h1>
-      <p class="header__txt">Мы работаем с 2004 года!</p>
+      <!-- <p class="header__txt">Мы работаем с 2004 года!</p> -->
     </div>
   </header>
 
@@ -148,24 +158,6 @@
               <h3 class="swiper-slide-title">Тепловые энегроустановки</h3>
             </a>
           </div>
-        </div>
-      </div>
-    </section>
-    <section class="contact-form">
-      <div class="container">
-        <div class="contact__wrapper">
-          <h2 class="contact-form__title">Оставьте заявку</h2>
-          <form class="contact-form__form" id="myForm">
-            <div class="contact-form__field">
-              <label for="name" class="contact-form__label">Имя</label>
-              <input type="text" id="name" name="name" class="contact-form__input" placeholder="Ваше имя" required>
-            </div>
-            <div class="contact-form__field">
-              <label for="phone" class="contact-form__label">Телефон</label>
-              <input type="tel" id="phone" name="phone" class="contact-form__input" placeholder="Ваш телефон" required>
-            </div>
-            <button type="submit" class="contact-form__button">Отправить</button>
-          </form>
         </div>
       </div>
     </section>
